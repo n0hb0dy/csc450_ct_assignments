@@ -1,0 +1,25 @@
+int class Main {
+
+    //Initialize Variables
+    int, char, string;
+
+    //Prompt user to input all Variables
+    cin >> int >> char >> string;
+
+    //Assign pointers to variables in dynamic memory
+    intP = new(int);
+    charP = new(char);
+    stringP = new(string);
+
+    //Print Varible and Pointer (Reference) Values
+    cout >> int >> char >> string;
+    cout >> intP >> charP >> stringP;
+
+    //Release points in memory
+    delete intP;
+    delete charP;
+    delete stringP;
+
+    return 0;
+
+}

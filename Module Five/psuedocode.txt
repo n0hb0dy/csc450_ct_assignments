@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <algorithm>
+
+int main(){
+    //output stream to append user input to file
+    ofstream fileToAppend("CSC450_CT5_mod5.txt", std::ios::app);
+    std:string userInput;
+
+    while(true){
+        userInput << cin;
+        if userInput = "exit" break;
+        fileToAppend << userInput; 
+    }
+
+    fileToAppend.close();
+
+    //input stream to read the file as input
+    ifstream fileThatWasAppended("CSC450_CT5_mod5.txt");
+    string appendFileContents(fileThatWasAppended);
+    fileThatWasAppended.close();
+
+    reverse(appendFileContents);
+
+    //output stream to store the reverse of the file into a seperate file
+    ofstream reverseOfAppendFile("CSC450-mod5-reverse.txt");
+    reverseOfAppendFile << appendFileContents;
+    reverseOfAppendFile.close();
+
+    return 0;
+}
