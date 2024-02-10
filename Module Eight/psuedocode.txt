@@ -1,0 +1,30 @@
+#include <iostream>
+#include <thread>
+#include <mutex>
+
+std::mutex mutex;
+
+void countUp{
+    for(i <= 20){
+        lock(mutex);
+        display(i);
+        sleep(0.5 seconds);
+    }
+}
+
+void countDown{
+    for(i >= 0){
+        lock(mutex);
+        display(i);
+        sleep(0.5 seconds);
+    }
+}
+
+int main(){
+
+    thread1(countUp);
+    thread2(countDown);
+
+    thread1 join and thread2 join;
+    return 0;
+}
